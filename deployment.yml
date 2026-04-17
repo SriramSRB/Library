@@ -17,7 +17,7 @@ spec:
         app: library
     spec:
       containers:
-        - name: sriramsrb/library
+        - name: library-app
           image: sriramsrb/library-app:latest
           imagePullPolicy: Never
           ports:
