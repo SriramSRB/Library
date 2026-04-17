@@ -19,7 +19,7 @@ spec:
       containers:
         - name: library-app
           image: sriramsrb/library-app:latest
-          imagePullPolicy: Always
+          imagePullPolicy: Never
           ports:
             - containerPort: 3000
 
