@@ -9,7 +9,7 @@ pipeline {
         }
         stage ('2. Docker build image') {
             steps {
-                sh 'docker build -t sriramsrb/library-app:latest'
+                sh 'docker build -t sriramsrb/library-app:latest .'
             }
         }
         stage ('3. Docker push image') {
