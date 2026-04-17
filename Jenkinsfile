@@ -16,7 +16,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'dockerhub_user', variable: 'DOCKER_PWD')]) {
                     sh 'echo "$DOCKER_PWD" | docker login -u sriramsrb --password-stdin'
-                    sh 'docker build -t sriramsrb/library-app:latest'
+                    sh 'docker push sriramsrb/library-app:latest'
                 }
             }
         }
