@@ -10,11 +10,11 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: library
+      project: library
   template:
     metadata:
       labels:
-        app: library
+        project: library
     spec:
       containers:
         - name: library-app
