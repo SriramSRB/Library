@@ -1,16 +1,12 @@
 const express = require('express');
 const path = require('path');
-
 const app = express();
+
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'library.html')));
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'library.html'));
-});
-
+// Start the server
 app.listen(PORT, () => {
-    console.log(`📚 Library Website Server is running!`);
-    console.log(`➡️  Access it locally at: http://localhost:${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
