@@ -23,7 +23,7 @@ pipeline {
         stage ('4. Deploy to kubernetes') {
             steps {
                 sh 'kubectl apply -f deployment.yml'
-                sh 'kubectl rollout restart deploymnet library-app-deployment'
+                sh 'kubectl rollout restart deployment library-app-deployment'
             }
         }
     }
